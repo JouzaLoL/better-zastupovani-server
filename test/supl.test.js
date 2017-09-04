@@ -36,9 +36,6 @@ describe('Supl library - Unit', () => {
 					expect(parsed.chybejici).to.be.an.instanceof(Array);
 					expect(parsed.suplovani).to.be.an.instanceof(Array);
 					expect(parsed.nahradniUcebny).to.be.an.instanceof(Array);
-					expect(parsed.chybejici[0]).to.be.an.instanceof(supl.ChybejiciRow);
-					expect(parsed.suplovani[0]).to.be.an.instanceof(supl.SuplRow);
-					expect(parsed.nahradniUcebny[0]).to.be.an.instanceof(supl.NahradniUcebnyRow);
 					done();
 				}).catch((err) => {
 					done(err);
