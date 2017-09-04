@@ -3,6 +3,10 @@
 	"version": "1.0.0",
 	"description": "Backend for the better-zastupovani project",
 	"main": "index.js",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/JouzaLoL/better-zastupovani-server.git"
+	},
 	"scripts": {
 		"dev": "SET NODE_ENV=development && node index.js",
 		"prod": "SET NODE_ENV=production && node index.js",
