@@ -1,7 +1,7 @@
 let supl = require('../lib/supl');
 let expect = require('chai').expect;
 
-describe('Supl library', () => {
+describe('Supl library - Unit', () => {
 	it('Should get class list', (done) => {
 		supl.getClasses()
 			.then((classes) => {

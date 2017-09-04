@@ -10,7 +10,7 @@ app.use(cors());
 
 // Logging
 const morgan = require('morgan');
-app.use(morgan('common'));
+app.use(morgan('tiny'));
 
 // Routes
 const API = require('./routes/api');
