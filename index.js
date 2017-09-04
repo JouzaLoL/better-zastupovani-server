@@ -5,30 +5,26 @@ var app = express();
 module.exports = app;
 
 // Middleware
-const bodyParser = require('body-parser');
-app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({
-	extended: false
-}));
-
 const cors = require('cors');
 app.use(cors());
+
+// Logging
+const morgan = require('morgan');
+app.use(morgan('common'));
 
 // Routes
 const API = require('./routes/api');
 app.use('/api/', API);
 
 // Static files
-app.use(express.statis('public'));
+app.use(express.static('public'));
 
 // Error handler
-app.use(function (err, req, res, next) {
-	console.error(err.stack);
-	res.status(500).send('Something broke!');
-});
+const errorHandler = require('./error');
+app.use(errorHandler);
 
 // Start server
 const port = process.env.PORT || 3000;
 app.listen(port, () => {
-	console.log('Server started' + " | NODE_ENV: " + process.env);
+	console.log(`better-zastupovani-server started | Environment: ${process.env.NODE_ENV}`);
 });

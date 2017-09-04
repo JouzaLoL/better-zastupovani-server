@@ -1,21 +1,25 @@
 {
-  "name": "better-zastupovani-server",
-  "version": "1.0.0",
-  "description": "Backend for the better-zastupovani project",
-  "main": "index.js",
-  "scripts": {
-    "test": "mocha"
-  },
-  "author": "Josef Vacek",
-  "license": "MIT",
-  "dependencies": {
-    "array2d": "0.0.5",
-    "cheerio": "^1.0.0-rc.2",
-    "express": "^4.15.4",
-    "htmlclean": "^3.0.3",
-    "iconv-lite": "^0.4.18",
-    "moment": "^2.18.1",
-    "request": "^2.81.0",
-    "sanitize-html": "^1.14.1"
-  }
+	"name": "better-zastupovani-server",
+	"version": "1.0.0",
+	"description": "Backend for the better-zastupovani project",
+	"main": "index.js",
+	"scripts": {
+		"dev": "SET NODE_ENV=development && node index.js",
+		"prod": "SET NODE_ENV=production && node index.js",
+		"test": "mocha"
+	},
+	"author": "Josef Vacek",
+	"license": "MIT",
+	"dependencies": {
+		"array2d": "0.0.5",
+		"cheerio": "^1.0.0-rc.2",
+		"cors": "^2.8.4",
+		"express": "^4.15.4",
+		"htmlclean": "^3.0.3",
+		"iconv-lite": "^0.4.18",
+		"moment": "^2.18.1",
+		"morgan": "^1.8.2",
+		"request": "^2.81.0",
+		"sanitize-html": "^1.14.1"
+	}
 }
