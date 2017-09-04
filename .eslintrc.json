@@ -1,0 +1,34 @@
+{
+    "env": {
+		"es6": true,
+		"jquery": true,
+		"browser": true,
+		"node": true,
+		"mocha": true
+    },
+	"extends": [
+		"google",
+		"eslint:recommended"
+	],
+	"parserOptions": {
+		"sourceType": "module",
+		"ecmaVersion": 8,
+		"node": true
+	},
+	"rules": {
+		"space-before-function-paren": "off",
+		"eol-last": "off",
+		"no-var": "off",
+		"comma-dangle": "off",
+		"new-cap": "off",
+		"max-len": "off",
+		"valid-jsdoc": "off",
+		"quotes": "off",
+		"no-shadow": "error",
+		"object-curly-spacing": "off",
+		"no-invalid-this": "off",
+		"no-constant-condition": "off",
+		"semi": "error",
+		"no-console": "off"
+	}
+}

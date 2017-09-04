@@ -1,0 +1,11 @@
+{
+  "name": "better-zastupovani-server",
+  "version": "1.0.0",
+  "description": "Backend for the better-zastupovani project",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "author": "Josef Vacek",
+  "license": "MIT"
+}
