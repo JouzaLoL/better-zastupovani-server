@@ -14,8 +14,9 @@ describe('Supl library - Unit', () => {
 	});
 
 	it('Should get current dates list', (done) => {
-		supl.getDates()
-			.then((dates) => {
+		supl.getDatesPage()
+			.then((datesPage) => {
+				const dates = supl.parseDatesPage(datesPage);
 				expect(dates).to.be.an.instanceof(Array);
 				expect(typeof dates[0].url).to.equal('string');
 				expect(dates[0].date.isValid()).to.be.true;
@@ -28,8 +29,9 @@ describe('Supl library - Unit', () => {
 	it('Should get data (chybejici, suplovani, nahradni ucebny) and parse it succesfully', (done) => {
 		
 		supl
-			.getDates().then((res) => {
-				let date = res[0];
+			.getDatesPage().then((datesPage) => {
+				const dates = supl.parseDatesPage(datesPage);
+				let date = dates[0];
 				supl.getSuplovani(date).then((suplovani) => {
 					let parsed = supl.parseSuplovani(suplovani);
 					expect(parsed).to.have.keys(['chybejici', 'suplovani', 'nahradniUcebny']);
