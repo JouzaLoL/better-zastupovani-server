@@ -2,11 +2,15 @@
 
 const express = require('express');
 var app = express();
+const compression = require('compression');
 module.exports = app;
 
 // Middleware
 const cors = require('cors');
 app.use(cors());
+
+// GZIP responses
+app.use(compression());
 
 // Logging
 const morgan = require('morgan');
